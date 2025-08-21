@@ -25,4 +25,4 @@ for city in cities:
 
         print(f"Saved weather data for {city} -> {filename}")
     else:
-        print(f"Error fetching data for {city}: {response.status_code} - {response.text}")
+        print(f"Error getting data for {city}: {response.status_code} - {response.text}")
