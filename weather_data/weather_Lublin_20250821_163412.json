@@ -1,0 +1,46 @@
+{
+    "coord": {
+        "lon": 23,
+        "lat": 51
+    },
+    "weather": [
+        {
+            "id": 804,
+            "main": "Clouds",
+            "description": "overcast clouds",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 22.36,
+        "feels_like": 22.74,
+        "temp_min": 22.36,
+        "temp_max": 22.36,
+        "pressure": 1008,
+        "humidity": 80,
+        "sea_level": 1008,
+        "grnd_level": 981
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 1.79,
+        "deg": 100,
+        "gust": 27.27
+    },
+    "clouds": {
+        "all": 100
+    },
+    "dt": 1755786648,
+    "sys": {
+        "type": 2,
+        "id": 2089711,
+        "country": "PL",
+        "sunrise": 1755746666,
+        "sunset": 1755797894
+    },
+    "timezone": 7200,
+    "id": 858785,
+    "name": "Lublin Voivodeship",
+    "cod": 200
+}

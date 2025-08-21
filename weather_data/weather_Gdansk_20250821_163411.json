@@ -1,0 +1,46 @@
+{
+    "coord": {
+        "lon": 18.6464,
+        "lat": 54.3521
+    },
+    "weather": [
+        {
+            "id": 804,
+            "main": "Clouds",
+            "description": "overcast clouds",
+            "icon": "04d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 21.95,
+        "feels_like": 21.32,
+        "temp_min": 20.79,
+        "temp_max": 22.86,
+        "pressure": 1008,
+        "humidity": 43,
+        "sea_level": 1008,
+        "grnd_level": 1003
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 2.68,
+        "deg": 250,
+        "gust": 0
+    },
+    "clouds": {
+        "all": 92
+    },
+    "dt": 1755786847,
+    "sys": {
+        "type": 2,
+        "id": 2077363,
+        "country": "PL",
+        "sunrise": 1755747193,
+        "sunset": 1755799457
+    },
+    "timezone": 7200,
+    "id": 3099434,
+    "name": "Gdańsk",
+    "cod": 200
+}

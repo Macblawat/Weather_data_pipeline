@@ -1,0 +1,45 @@
+{
+    "coord": {
+        "lon": 19.4667,
+        "lat": 51.75
+    },
+    "weather": [
+        {
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 21.71,
+        "feels_like": 21.11,
+        "temp_min": 20.9,
+        "temp_max": 22.83,
+        "pressure": 1008,
+        "humidity": 45,
+        "sea_level": 1008,
+        "grnd_level": 985
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 1.54,
+        "deg": 160
+    },
+    "clouds": {
+        "all": 0
+    },
+    "dt": 1755786566,
+    "sys": {
+        "type": 1,
+        "id": 1706,
+        "country": "PL",
+        "sunrise": 1755747406,
+        "sunset": 1755798849
+    },
+    "timezone": 7200,
+    "id": 3093133,
+    "name": "Łódź",
+    "cod": 200
+}
