@@ -17,12 +17,11 @@ for city in cities:
     response = requests.get(url)
     
     if response.status_code == 200:
-        data = response.json()
         
         filename = f"weather_data/weather_{city}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
 
         with open(filename, "w", encoding="utf-8") as f:
-         json.dump(data, f, indent=4, ensure_ascii=False)
+         json.dump(response.json(), f, indent=4, ensure_ascii=False)
 
         print(f"Saved weather data for {city} -> {filename}")
     else:
