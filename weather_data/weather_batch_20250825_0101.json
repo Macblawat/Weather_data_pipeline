@@ -1,0 +1,457 @@
+{
+  "Warsaw": {
+    "coord": {
+      "lon": 21.0118,
+      "lat": 52.2298
+    },
+    "weather": [
+      {
+        "id": 800,
+        "main": "Clear",
+        "description": "clear sky",
+        "icon": "01n"
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": 12.6,
+      "feels_like": 11.51,
+      "temp_min": 10.86,
+      "temp_max": 14.24,
+      "pressure": 1014,
+      "humidity": 61,
+      "sea_level": 1014,
+      "grnd_level": 1003
+    },
+    "visibility": 10000,
+    "wind": {
+      "speed": 3.6,
+      "deg": 250
+    },
+    "clouds": {
+      "all": 0
+    },
+    "dt": 1756076310,
+    "sys": {
+      "type": 2,
+      "id": 2032856,
+      "country": "PL",
+      "sunrise": 1756092960,
+      "sunset": 1756143632
+    },
+    "timezone": 7200,
+    "id": 756135,
+    "name": "Warsaw",
+    "cod": 200
+  },
+  "Krakow": {
+    "coord": {
+      "lon": 19.9167,
+      "lat": 50.0833
+    },
+    "weather": [
+      {
+        "id": 803,
+        "main": "Clouds",
+        "description": "broken clouds",
+        "icon": "04n"
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": 12.59,
+      "feels_like": 10.82,
+      "temp_min": 11.52,
+      "temp_max": 12.77,
+      "pressure": 1019,
+      "humidity": 35,
+      "sea_level": 1019,
+      "grnd_level": 987
+    },
+    "visibility": 10000,
+    "wind": {
+      "speed": 2.88,
+      "deg": 246,
+      "gust": 5.72
+    },
+    "clouds": {
+      "all": 62
+    },
+    "dt": 1756076362,
+    "sys": {
+      "type": 2,
+      "id": 2095241,
+      "country": "PL",
+      "sunrise": 1756093495,
+      "sunset": 1756143622
+    },
+    "timezone": 7200,
+    "id": 3094802,
+    "name": "Krakow",
+    "cod": 200
+  },
+  "Gdansk": {
+    "coord": {
+      "lon": 18.6464,
+      "lat": 54.3521
+    },
+    "weather": [
+      {
+        "id": 800,
+        "main": "Clear",
+        "description": "clear sky",
+        "icon": "01n"
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": 13.92,
+      "feels_like": 13.48,
+      "temp_min": 13.38,
+      "temp_max": 14.8,
+      "pressure": 1011,
+      "humidity": 81,
+      "sea_level": 1011,
+      "grnd_level": 1006
+    },
+    "visibility": 10000,
+    "wind": {
+      "speed": 5.66,
+      "deg": 260
+    },
+    "clouds": {
+      "all": 0
+    },
+    "dt": 1756076399,
+    "sys": {
+      "type": 2,
+      "id": 2101463,
+      "country": "PL",
+      "sunrise": 1756093230,
+      "sunset": 1756144497
+    },
+    "timezone": 7200,
+    "id": 3099434,
+    "name": "Gdańsk",
+    "cod": 200
+  },
+  "Wroclaw": {
+    "coord": {
+      "lon": 17.0333,
+      "lat": 51.1
+    },
+    "weather": [
+      {
+        "id": 800,
+        "main": "Clear",
+        "description": "clear sky",
+        "icon": "01n"
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": 13.46,
+      "feels_like": 12.58,
+      "temp_min": 11.12,
+      "temp_max": 14.43,
+      "pressure": 1019,
+      "humidity": 66,
+      "sea_level": 1019,
+      "grnd_level": 1002
+    },
+    "visibility": 10000,
+    "wind": {
+      "speed": 4.12,
+      "deg": 230
+    },
+    "clouds": {
+      "all": 0
+    },
+    "dt": 1756076397,
+    "sys": {
+      "type": 2,
+      "id": 2103126,
+      "country": "PL",
+      "sunrise": 1756094062,
+      "sunset": 1756144438
+    },
+    "timezone": 7200,
+    "id": 3081368,
+    "name": "Wrocław",
+    "cod": 200
+  },
+  "Poznan": {
+    "coord": {
+      "lon": 16.9299,
+      "lat": 52.4069
+    },
+    "weather": [
+      {
+        "id": 800,
+        "main": "Clear",
+        "description": "clear sky",
+        "icon": "01n"
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": 15,
+      "feels_like": 14.23,
+      "temp_min": 14.98,
+      "temp_max": 15.62,
+      "pressure": 1016,
+      "humidity": 64,
+      "sea_level": 1016,
+      "grnd_level": 1006
+    },
+    "visibility": 10000,
+    "wind": {
+      "speed": 3.6,
+      "deg": 260
+    },
+    "clouds": {
+      "all": 0
+    },
+    "dt": 1756076487,
+    "sys": {
+      "type": 2,
+      "id": 19661,
+      "country": "PL",
+      "sunrise": 1756093917,
+      "sunset": 1756144633
+    },
+    "timezone": 7200,
+    "id": 3088171,
+    "name": "Poznań",
+    "cod": 200
+  },
+  "Lodz": {
+    "coord": {
+      "lon": 19.4667,
+      "lat": 51.75
+    },
+    "weather": [
+      {
+        "id": 800,
+        "main": "Clear",
+        "description": "clear sky",
+        "icon": "01n"
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": 9.95,
+      "feels_like": 4.06,
+      "temp_min": 8.9,
+      "temp_max": 10.65,
+      "pressure": 1016,
+      "humidity": 70,
+      "sea_level": 1016,
+      "grnd_level": 993
+    },
+    "visibility": 10000,
+    "wind": {
+      "speed": 25.03,
+      "deg": 0,
+      "gust": 25.03
+    },
+    "clouds": {
+      "all": 0
+    },
+    "dt": 1756076104,
+    "sys": {
+      "type": 2,
+      "id": 19430,
+      "country": "PL",
+      "sunrise": 1756093394,
+      "sunset": 1756143939
+    },
+    "timezone": 7200,
+    "id": 3093133,
+    "name": "Łódź",
+    "cod": 200
+  },
+  "Szczecin": {
+    "coord": {
+      "lon": 14.553,
+      "lat": 53.4289
+    },
+    "weather": [
+      {
+        "id": 803,
+        "main": "Clouds",
+        "description": "broken clouds",
+        "icon": "04n"
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": 12.51,
+      "feels_like": 11.91,
+      "temp_min": 10.55,
+      "temp_max": 13.08,
+      "pressure": 1016,
+      "humidity": 80,
+      "sea_level": 1016,
+      "grnd_level": 1013
+    },
+    "visibility": 10000,
+    "wind": {
+      "speed": 3.58,
+      "deg": 250
+    },
+    "clouds": {
+      "all": 70
+    },
+    "dt": 1756076487,
+    "sys": {
+      "type": 2,
+      "id": 19799,
+      "country": "PL",
+      "sunrise": 1756094347,
+      "sunset": 1756145344
+    },
+    "timezone": 7200,
+    "id": 3083829,
+    "name": "Szczecin",
+    "cod": 200
+  },
+  "Lublin": {
+    "coord": {
+      "lon": 23,
+      "lat": 51
+    },
+    "weather": [
+      {
+        "id": 803,
+        "main": "Clouds",
+        "description": "broken clouds",
+        "icon": "04n"
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": 11.25,
+      "feels_like": 10.7,
+      "temp_min": 11.25,
+      "temp_max": 11.25,
+      "pressure": 1016,
+      "humidity": 87,
+      "sea_level": 1016,
+      "grnd_level": 989
+    },
+    "visibility": 10000,
+    "wind": {
+      "speed": 6.71,
+      "deg": 189,
+      "gust": 27.27
+    },
+    "clouds": {
+      "all": 69
+    },
+    "dt": 1756076222,
+    "sys": {
+      "type": 2,
+      "id": 2089711,
+      "country": "PL",
+      "sunrise": 1756092642,
+      "sunset": 1756142996
+    },
+    "timezone": 7200,
+    "id": 858785,
+    "name": "Lublin Voivodeship",
+    "cod": 200
+  },
+  "Katowice": {
+    "coord": {
+      "lon": 19.0275,
+      "lat": 50.2584
+    },
+    "weather": [
+      {
+        "id": 803,
+        "main": "Clouds",
+        "description": "broken clouds",
+        "icon": "04n"
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": 10.21,
+      "feels_like": 9.04,
+      "temp_min": 10.21,
+      "temp_max": 10.21,
+      "pressure": 1018,
+      "humidity": 67,
+      "sea_level": 1018,
+      "grnd_level": 986
+    },
+    "visibility": 10000,
+    "wind": {
+      "speed": 2.7,
+      "deg": 282,
+      "gust": 6.63
+    },
+    "clouds": {
+      "all": 83
+    },
+    "dt": 1756076363,
+    "sys": {
+      "type": 1,
+      "id": 1705,
+      "country": "PL",
+      "sunrise": 1756093688,
+      "sunset": 1756143856
+    },
+    "timezone": 7200,
+    "id": 3096472,
+    "name": "Katowice",
+    "cod": 200
+  },
+  "Bialystok": {
+    "coord": {
+      "lon": 23.15,
+      "lat": 53.1333
+    },
+    "weather": [
+      {
+        "id": 803,
+        "main": "Clouds",
+        "description": "broken clouds",
+        "icon": "04n"
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": 8.31,
+      "feels_like": 8.31,
+      "temp_min": 7.21,
+      "temp_max": 8.31,
+      "pressure": 1012,
+      "humidity": 88,
+      "sea_level": 1012,
+      "grnd_level": 995
+    },
+    "visibility": 10000,
+    "wind": {
+      "speed": 0.45,
+      "deg": 213,
+      "gust": 0.89
+    },
+    "clouds": {
+      "all": 83
+    },
+    "dt": 1756076236,
+    "sys": {
+      "type": 2,
+      "id": 2077278,
+      "country": "PL",
+      "sunrise": 1756092323,
+      "sunset": 1756143242
+    },
+    "timezone": 7200,
+    "id": 776069,
+    "name": "Białystok",
+    "cod": 200
+  }
+}
