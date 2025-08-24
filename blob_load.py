@@ -22,11 +22,12 @@ try:
             blob_client = container_client.get_blob_client(filename)
 
             with open(file_path, "rb") as data:
-                blob_client.upload_blob(data, overwrite=True)
+                blob_client.upload_blob(data)
                 print(f"Uploaded {filename} to Azure Blob Storage")
 except Exception as e:
     print(f" Loading data error: {e}")
     
+#after loading the data we  delete the files on our local computer and store it in the cloud
 for filename in os.listdir(local_folder):
     if filename.endswith(".json"):
         file_path = os.path.join(local_folder, filename)
