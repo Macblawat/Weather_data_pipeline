@@ -18,21 +18,21 @@ weather_dag = DAG(
     default_args=default_args,
     description="Fetch weather data and upload to Azure Blob",
     schedule="@daily",
-    start_date=datetime(2025, 8, 24),
+    start_date=datetime(2025, 8, 23),
     catchup=False,
 )
 
 # Define tasks
 task_fetch = BashOperator(
     task_id="fetch_weather_data",
-    bash_command=f"python3 fetch_weather.py",
+    bash_command=f"python3 scrap_weather.py",
     cwd=WORKDIR,
     dag=weather_dag
 )
 
 task_upload = BashOperator(
     task_id="upload_to_blob",
-    bash_command=f"python3 upload_to_blob.py",
+    bash_command=f"python3 blob_load.py",
     cwd=WORKDIR,
     dag=weather_dag)
 
