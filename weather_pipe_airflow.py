@@ -3,7 +3,8 @@ from airflow.operators.bash import BashOperator
 from datetime import datetime, timedelta
 import os
 
-WORKDIR = os.path.join(os.path.dirname(__file__), "..")
+# Use scripts in same folder as DAG
+WORKDIR = os.path.dirname(__file__)
 
 default_args = {
     "owner": "Maciek",
@@ -11,23 +12,29 @@ default_args = {
     "retry_delay": timedelta(minutes=10),
 }
 
-with DAG(
+# Explicitly create DAG
+weather_dag = DAG(
     dag_id="weather_pipeline",
     default_args=default_args,
     description="Fetch weather data and upload to Azure Blob",
-    schedule_interval="@daily",
+    schedule="@daily",
     start_date=datetime(2025, 8, 24),
     catchup=False,
-) as dag:
-    
-    task_fetch = BashOperator(
-        task_id="fetch_weather_data",
-        bash_command=f"python {WORKDIR}/fetch_weather.py"
-    )
+)
 
-    task_upload = BashOperator(
-        task_id="upload_to_blob",
-        bash_command=f"python {WORKDIR}/upload_to_blob.py"
-    )
+# Define tasks
+task_fetch = BashOperator(
+    task_id="fetch_weather_data",
+    bash_command=f"python3 fetch_weather.py",
+    cwd=WORKDIR,
+    dag=weather_dag
+)
 
-    task_fetch >> task_upload
+task_upload = BashOperator(
+    task_id="upload_to_blob",
+    bash_command=f"python3 upload_to_blob.py",
+    cwd=WORKDIR,
+    dag=weather_dag)
+
+# Set task dependencies
+task_fetch >> task_upload
