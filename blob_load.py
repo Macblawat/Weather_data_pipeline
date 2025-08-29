@@ -27,8 +27,3 @@ try:
 except Exception as e:
     print(f" Loading data error: {e}")
     
-#after loading the data we  delete the files on our local computer and store it in the cloud
-for filename in os.listdir(local_folder):
-    if filename.endswith(".json"):
-        file_path = os.path.join(local_folder, filename)
-        os.remove(file_path) 

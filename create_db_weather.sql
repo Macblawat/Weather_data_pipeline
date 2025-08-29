@@ -14,6 +14,14 @@ CREATE TABLE date (
     month INT NOT NULL,
     day INT NOT NULL,
     weekday NVARCHAR(15)
+
+);
+
+CREATE TABLE time(
+    time_id INT IDENTITY(1,1) PRIMARY KEY,
+    hour INT NOT NULL,
+    minute INT NOT NULL,
+    time_str VARCHAR(5) NOT NULL
 );
 
 CREATE TABLE weather_info (
@@ -28,8 +36,7 @@ CREATE TABLE  weather (
     city_id INT NOT NULL FOREIGN KEY REFERENCES city(city_id),
     weather_id INT NULL FOREIGN KEY REFERENCES weather_info(weather_id),
     date_id INT NOT NULL FOREIGN KEY REFERENCES date(date_id),
-
-    timestamp_utc DATETIME NOT NULL, 
+    time_id INT NOT NULL FOREIGN KEY REFERENCES date(time_id),
     temperature FLOAT,
     feels_like FLOAT,
     temp_min FLOAT,

@@ -1,3 +1,4 @@
 .env
 airflow_venv/
 __pycache__/
+test.ipynb
