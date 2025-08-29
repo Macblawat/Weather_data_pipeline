@@ -92,6 +92,28 @@ def get_or_create_time(unix_timestamp):
     time_db_id = cursor.fetchone().time_id
     return time_db_id
 
+def validate_weather(main, wind, clouds, rain, snow):
+    if not (-90 <= main.get('temp', 0) <= 60):
+        raise ValueError(f"Temperature out of range: {main.get('temp')}")
+    if not (-90 <= main.get('feels_like', 0) <= 60):
+        raise ValueError(f"Feels_like out of range: {main.get('feels_like')}")
+    if not (-90 <= main.get('temp_min', 0) <= 60):
+        raise ValueError(f"Temp_min out of range: {main.get('temp_min')}")
+    if not (-90 <= main.get('temp_max', 0) <= 60):
+        raise ValueError(f"Temp_max out of range: {main.get('temp_max')}")
+    if not (800 <= main.get('pressure', 0) <= 1100):
+        raise ValueError(f"Pressure out of range: {main.get('pressure')}")
+    if not (0 <= main.get('humidity', 0) <= 100):
+        raise ValueError(f"Humidity out of range: {main.get('humidity')}")
+    if not (0 <= wind.get('speed', 0) <= 150):
+        raise ValueError(f"Wind speed out of range: {wind.get('speed')}")
+    if not (0 <= clouds.get('all', 0) <= 100):
+        raise ValueError(f"Cloudiness out of range: {clouds.get('all')}")
+    if not (0 <= rain.get('1h', 0) <= 500):
+        raise ValueError(f"Rain 1h out of range: {rain.get('1h', 0)}")
+    if not (0 <= snow.get('1h', 0) <= 500):
+        raise ValueError(f"Snow 1h out of range: {snow.get('1h', 0)}")
+
 rows_to_insert = []
     
 for city_name, city_data in data.items():
@@ -111,7 +133,7 @@ for city_name, city_data in data.items():
 
         rain_1h = rain.get('1h', 0)
         snow_1h = snow.get('1h', 0)
-
+        validate_weather(main, wind, clouds, rain, snow)
        
         row=(city_id,
         weather_id,
