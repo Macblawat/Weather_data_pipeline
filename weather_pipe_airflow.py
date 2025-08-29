@@ -1,5 +1,6 @@
 from airflow import DAG
 from airflow.operators.bash import BashOperator
+from airflow.utils.trigger_rule import TriggerRule
 from datetime import datetime, timedelta
 import os
 
@@ -48,6 +49,7 @@ delete_data=BashOperator(
     bash_command=f"python3 delete_local_data.py",
     cwd=WORKDIR,
     dag=weather_dag
+    trigger_rule=TriggerRule.ALL_DONE 
 )
 
 
