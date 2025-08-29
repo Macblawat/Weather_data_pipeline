@@ -4,6 +4,7 @@ from airflow.utils.trigger_rule import TriggerRule
 from datetime import datetime, timedelta
 import os
 from dotenv import load_dotenv
+from airflow.operators.email import EmailOperator
 
 WORKDIR = os.path.dirname(__file__)
 load_dotenv()
@@ -57,4 +58,21 @@ delete_data=BashOperator(
 )
 
 
+notify_error = EmailOperator(
+    task_id="notify_error",
+    to=email,
+    subject="Airflow Error: Unable to load data",
+    html_content="""
+        <h3>Weather Pipeline Failure</h3>
+        <p>DAG: {{ dag.dag_id }}</p>
+        <p>Task: {{ task_instance.task_id }}</p>
+        <p>Execution Date: {{ ts }}</p>
+        <p>Log URL: <a href="{{ task_instance.log_url }}">View Logs</a></p>
+    """,
+    trigger_rule=TriggerRule.ONE_FAILED,
+    dag=weather_dag,
+)
+
 task_scrap >> task_upload_blob >> task_transform_db >> delete_data
+
+[task_scrap, task_upload_blob, task_transform_db] >> notify_error>> delete_data
