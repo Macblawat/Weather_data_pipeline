@@ -34,7 +34,7 @@ CREATE TABLE weather_info (
 CREATE TABLE  weather (
     fact_id BIGINT IDENTITY(1,1) PRIMARY KEY,
     city_id INT NOT NULL FOREIGN KEY REFERENCES city(city_id),
-    weather_id INT NULL FOREIGN KEY REFERENCES weather_info(weather_id),
+    weather_id INT NOT NULL FOREIGN KEY REFERENCES weather_info(weather_id),
     date_id INT NOT NULL FOREIGN KEY REFERENCES date(date_id),
     time_id INT NOT NULL FOREIGN KEY REFERENCES time(time_id),
     temperature FLOAT,
@@ -42,14 +42,14 @@ CREATE TABLE  weather (
     temp_min FLOAT,
     temp_max FLOAT,
     pressure INT,
-    sea_level INT NULL,
-    ground_level INT NULL,
+    sea_level INT ,
+    ground_level INT ,
     humidity INT,
     visibility INT,
 
     wind_speed FLOAT,
     wind_deg INT,
-    wind_gust FLOAT NULL,
+    wind_gust FLOAT ,
 
     cloudiness INT,
     rain_1h FLOAT NULL,

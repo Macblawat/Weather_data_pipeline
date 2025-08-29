@@ -3,14 +3,18 @@ from airflow.operators.bash import BashOperator
 from airflow.utils.trigger_rule import TriggerRule
 from datetime import datetime, timedelta
 import os
-
+from dotenv import load_dotenv
 
 WORKDIR = os.path.dirname(__file__)
-
+load_dotenv()
+email = os.getenv("EMAIL")
 default_args = {
     "owner": "Maciek",
-    "retries": 1,
-    "retry_delay": timedelta(minutes=10),
+    "retries": 3,
+    "retry_delay": timedelta(minutes=5),
+    "email_on_failure": True,
+    "email_on_retry": True,
+    "email": email,
 }
 
 
@@ -48,7 +52,7 @@ delete_data=BashOperator(
     task_id="delete_local_data",
     bash_command=f"python3 delete_local_data.py",
     cwd=WORKDIR,
-    dag=weather_dag
+    dag=weather_dag,
     trigger_rule=TriggerRule.ALL_DONE 
 )
 
