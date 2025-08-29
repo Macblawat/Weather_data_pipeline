@@ -36,7 +36,7 @@ CREATE TABLE  weather (
     city_id INT NOT NULL FOREIGN KEY REFERENCES city(city_id),
     weather_id INT NULL FOREIGN KEY REFERENCES weather_info(weather_id),
     date_id INT NOT NULL FOREIGN KEY REFERENCES date(date_id),
-    time_id INT NOT NULL FOREIGN KEY REFERENCES date(time_id),
+    time_id INT NOT NULL FOREIGN KEY REFERENCES time(time_id),
     temperature FLOAT,
     feels_like FLOAT,
     temp_min FLOAT,
@@ -53,6 +53,9 @@ CREATE TABLE  weather (
 
     cloudiness INT,
     rain_1h FLOAT NULL,
-    snow_1h FLOAT NULL,
-
+    snow_1h FLOAT NULL
 );
+
+CREATE INDEX idx_weather_city ON weather(city_id);
+CREATE INDEX idx_weather_date ON weather(date_id);
+CREATE INDEX idx_weather_time ON weather(time_id);
