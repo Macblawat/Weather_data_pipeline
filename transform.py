@@ -2,7 +2,6 @@ import os
 import json
 import pyodbc
 from datetime import datetime,timezone
-import pandas as pd
 import logging
 from dotenv import load_dotenv
 
