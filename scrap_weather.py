@@ -27,7 +27,7 @@ os.makedirs("weather_data", exist_ok=True)
 weather_data = {}
 
 def scrap_weather_for_city(city, api_key):
-    base_url = "http://api.openweathermap.org/data/2.5/weather"
+    base_url = "https://api.openweathermap.org/data/2.5/weather"
     url = f"{base_url}?q={city},PL&appid={api_key}&units=metric"
     
     for attempt in range(1, MAX_RETRIES + 1):
@@ -83,4 +83,4 @@ if weather_data:
     
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(weather_data, f, ensure_ascii=False, indent=2)
-    logging.info(f"Saved batch weather data -> {filename}") 
+    logging.info(f"Saved batch weather data -> {filename} with {len(weather_data)} cities") 
