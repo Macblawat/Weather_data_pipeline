@@ -8,5 +8,8 @@ local_folder = "weather_data"
 for filename in os.listdir(local_folder):
     if filename.endswith(".json"):
         file_path = os.path.join(local_folder, filename)
-        os.remove(file_path) 
-        logging.info('f"Deleted file : {file_path}')
+        try:
+            os.remove(file_path)
+            logging.info(f"Deleted file: {file_path}")
+        except Exception as e:
+            logging.error(f"Failed to delete {file_path}: {e}")
