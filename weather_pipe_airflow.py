@@ -75,4 +75,4 @@ notify_error = EmailOperator(
 
 task_scrap >> task_upload_blob >> task_transform_db >> delete_data
 
-[task_scrap, task_upload_blob, task_transform_db] >> notify_error
+[task_scrap, task_upload_blob, task_transform_db, delete_data] >> notify_error
