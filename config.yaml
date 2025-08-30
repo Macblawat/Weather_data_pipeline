@@ -1,0 +1,108 @@
+retries: 3
+retry_delay: 5
+cities:
+  - Warsaw
+  - Krakow
+  - Gdansk
+  - Wroclaw
+  - Poznan
+  - Lodz
+  - Szczecin
+  - Lublin
+  - Katowice
+  - Bialystok
+  - Gdynia
+  - Sopot
+  - Torun
+  - Opole
+  - Rzeszow
+  - Zielona Gora
+  - Gliwice
+  - Bytom
+  - Bielsko-Biala
+  - Zabrze
+  - Ruda Slaska
+  - Tychy
+  - Dabrowa Gornicza
+  - Elblag
+  - Plock
+  - Walbrzych
+  - Gorzow Wielkopolski
+  - Kalisz
+  - Legnica
+  - Grudziadz
+  - Jaworzno
+  - Nowy Sacz
+  - Jastrzebie-Zdroj
+  - Konin
+  - Siedlce
+  - Ostrow Wielkopolski
+  - Siemianowice Slaskie
+  - Piotrkow Trybunalski
+  - Mielec
+  - Ostroleka
+  - Przemysl
+  - Stargard
+  - Inowroclaw
+  - Swinoujscie
+  - Gniezno
+  - Chorzow
+  - Pruszkow
+  - Swietochlowice
+  - Pabianice
+  - Zamosc
+  - Wloclawek
+  - Chelm
+  - Lubin
+  - Zgierz
+  - Raciborz
+  - Kedzierzyn-Kozle
+  - Stargard Szczecinski
+  - Krosno
+  - Leszno
+  - Sopot
+  - Ostrowiec Swietokrzyski
+  - Skierniewice
+  - Elk
+  - Starogard Gdanski
+  - Piekary Slaskie
+  - Wejherowo
+  - Swidnica
+  - Stalowa Wola
+  - Lomza
+  - Zary
+  - Olsztyn
+  - Biala Podlaska
+  - Lubartow
+  - Nowa Sol
+  - Plonsk
+  - Czestochowa
+  - Ostrow Mazowiecka
+  - Miechow
+  - Suwalki
+  - Kutno
+  - Baborow
+  - Myslowice
+  - Tomaszow Mazowiecki
+  - Starachowice
+  - Glogow
+  - Kluczbork
+  - Brzeg
+  - Swarzedz
+  - Malbork
+  - Ketrzyn
+  - Zlotow
+  - Chojnice
+  - Naklo
+  - Kolobrzeg
+  - Pila
+  - Rumia
+  - Tczew
+  - Lask
+  - Pleszew
+  - Szczytno
+  - Krosno Odrzanskie
+  - Wodzislaw Slaski
+  - Stargard
+  - Nysa
+  - Zawiercie
