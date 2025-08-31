@@ -85,5 +85,4 @@ if weather_data:
         json.dump(weather_data, f, ensure_ascii=False, indent=2)
     logging.info(f"Saved batch weather data -> {filename} with {len(weather_data)} cities")
 else:
-    logging.warning("No weather data collected. Exiting.")
-    exit(1) 
+    raise RuntimeError("No weather data collected from any city. Task failed.")

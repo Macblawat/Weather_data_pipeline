@@ -128,7 +128,6 @@ for city_name, city_data in data.items():
         clouds = city_data.get('clouds', {})
         rain = city_data.get('rain', {})
         snow = city_data.get('snow', {})
-        sys = city_data.get('sys', {})
 
         rain_1h = rain.get('1h', 0)
         snow_1h = snow.get('1h', 0)
