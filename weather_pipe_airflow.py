@@ -9,6 +9,9 @@ from airflow.operators.email import EmailOperator
 WORKDIR = os.path.dirname(__file__)
 load_dotenv()
 email = os.getenv("EMAIL")
+
+env_vars = os.environ.copy()
+
 default_args = {
     "owner": "Maciek",
     "retries": 3,
@@ -33,6 +36,7 @@ task_scrap= BashOperator(
     task_id="scrap_weather_data",
     bash_command=f"python3 scrap_weather.py",
     cwd=WORKDIR,
+    env=env_vars,
     dag=weather_dag
 )
 
@@ -40,12 +44,14 @@ task_upload_blob = BashOperator(
     task_id="upload_to_blob",
     bash_command=f"python3 blob_load.py",
     cwd=WORKDIR,
+    env=env_vars,
     dag=weather_dag)
 
 task_transform_db=BashOperator(
     task_id="upload_to_db",
     bash_command=f"python3 transform.py",
     cwd=WORKDIR,
+    env=env_vars,
     dag=weather_dag
 )
 
@@ -53,6 +59,7 @@ delete_data=BashOperator(
     task_id="delete_local_data",
     bash_command=f"python3 delete_local_data.py",
     cwd=WORKDIR,
+    env=env_vars, 
     dag=weather_dag,
     trigger_rule=TriggerRule.ALL_DONE 
 )
