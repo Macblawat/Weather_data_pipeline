@@ -26,13 +26,13 @@ os.makedirs("weather_data", exist_ok=True)
 
 weather_data = {}
 
-def scrap_weather_for_city(city, api_key):
+def scrap_weather_for_city(city, api_key,session):
     base_url = "https://api.openweathermap.org/data/2.5/weather"
     url = f"{base_url}?q={city},PL&appid={api_key}&units=metric"
     
     for attempt in range(1, MAX_RETRIES + 1):
         try:
-            response = requests.get(url, timeout=10)
+            response = session.get(url, timeout=10)
             response.raise_for_status()
             logging.info(f"Scrapped weather for {city}")
             return city, response.json()
@@ -44,13 +44,13 @@ def scrap_weather_for_city(city, api_key):
     logging.error(f"Failed to fetch weather for {city} after {MAX_RETRIES} attempts")
     return city, None
 
-
-with ThreadPoolExecutor(max_workers=5) as executor:  
-    city_weathers = {executor.submit(scrap_weather_for_city, city, API_KEY): city for city in cities}
-    for city_weather in as_completed(city_weathers):
-        city, data = city_weather.result()
-        if data:
-            weather_data[city] = data
+with requests.Session() as session:
+    with ThreadPoolExecutor(max_workers=5) as executor:  
+        city_weathers = {executor.submit(scrap_weather_for_city, city, API_KEY,session): city for city in cities}
+        for city_weather in as_completed(city_weathers):
+            city, data = city_weather.result()
+            if data:
+                weather_data[city] = data
      
  # this is a code for inserting the cities sequentially and not parallel, the first version of the scrapper           
 '''for city in cities:
@@ -83,4 +83,7 @@ if weather_data:
     
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(weather_data, f, ensure_ascii=False, indent=2)
-    logging.info(f"Saved batch weather data -> {filename} with {len(weather_data)} cities") 
+    logging.info(f"Saved batch weather data -> {filename} with {len(weather_data)} cities")
+else:
+    logging.warning("No weather data collected. Exiting.")
+    exit(1) 
