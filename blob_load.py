@@ -13,6 +13,9 @@ if not AZURE_CONN_STR:
 
 local_folder = "weather_data"
 
+if not os.path.exists(local_folder):
+    raise FileNotFoundError(f"Local folder {local_folder} not found")
+
 blob_service_client = BlobServiceClient.from_connection_string(AZURE_CONN_STR)
 container_client = blob_service_client.get_container_client(CONTAINER_NAME)
 
@@ -22,7 +25,7 @@ def upload_file_to_blob(local_folder,filename):
         blob_client = container_client.get_blob_client(filename)
         with open(file_path, "rb") as data:
             blob_client.upload_blob(data, overwrite=True)
-        logging.info(f"Uploaded {filename} to Azure Blob Storage")
+        logging.info(f"Uploaded {filename} to Azure Blob Storage")  
         return True
     except Exception as e:
         logging.error(f"Failed to upload {filename}: {e}")
