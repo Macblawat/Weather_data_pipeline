@@ -1,6 +1,7 @@
 
 
 Weather Data Pipeline
+
 This project is a functional ETL pipeline I built to handle real-time weather data. The goal was to move data from a live API all the way to a structured SQL database while keeping everything automated.
 
 1. Fetching the Data (API to Blob)
